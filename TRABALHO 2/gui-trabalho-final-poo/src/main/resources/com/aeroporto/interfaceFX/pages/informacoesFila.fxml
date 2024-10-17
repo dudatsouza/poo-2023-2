@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPaneInicial" prefHeight="510.0" prefWidth="1280.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aeroporto.interfaceFX.ElementosFilaController">
+   <children>
+      <ImageView fitHeight="344.0" fitWidth="492.0" layoutX="39.0" layoutY="71.0" pickOnBounds="true">
+         <image>
+            <Image url="@../images/fundo-branco.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#3e4e40" height="76.0" layoutX="58.0" layoutY="100.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="0.0" width="381.0" />
+      <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#c5cecf" height="44.0" layoutX="60.0" layoutY="197.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="0.0" width="292.0" />
+      <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#c5cecf" height="44.0" layoutX="60.0" layoutY="334.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="0.0" width="292.0" />
+      <Rectangle arcHeight="15.0" arcWidth="15.0" fill="#899b50" height="30.0" layoutX="373.0" layoutY="204.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="0.0" width="43.0" />
+      <Rectangle arcHeight="15.0" arcWidth="15.0" fill="#899b50" height="30.0" layoutX="373.0" layoutY="341.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="0.0" width="43.0" />
+      <Label fx:id="labelInfo1" alignment="CENTER" contentDisplay="CENTER" layoutX="97.0" layoutY="208.0" text="TEMPO MÉDIO DE ESPERA:" textFill="#3e4e40">
+         <font>
+            <Font name="Merriweather Regular" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelInfo3" layoutX="103.0" layoutY="345.0" text="QUANTIDADE DE AVIÕES:" textFill="#3e4e40">
+         <font>
+            <Font name="Merriweather Regular" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="tempoMedioEspera" alignment="CENTER" layoutX="373.0" layoutY="211.0" prefHeight="17.0" prefWidth="43.0" text="0" textFill="#3e4e40">
+         <font>
+            <Font name="Merriweather Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="qtdAvioes" alignment="CENTER" layoutX="373.0" layoutY="347.0" prefHeight="17.0" prefWidth="43.0" text="0" textFill="#3e4e40">
+         <font>
+            <Font name="Merriweather Bold" size="12.0" />
+         </font>
+      </Label>
+      <Pane fx:id="infoPistas" layoutX="564.0" layoutY="66.0" prefHeight="344.0" prefWidth="669.0">
+         <children>
+            <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#c5cecf" height="332.0" layoutX="7.0" layoutY="10.0" opacity="0.7" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="0.0" width="663.0" />
+            <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#596b42" height="55.0" layoutX="22.0" layoutY="25.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="0.0" width="633.0" />
+            <ImageView fitHeight="59.0" fitWidth="49.0" layoutX="592.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/pista.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="250.0" layoutY="39.0" text="AVIÕES NA FILA:" textFill="WHITE">
+               <font>
+                  <Font name="Merriweather Bold" size="20.0" />
+               </font>
+            </Label>
+            <ListView fx:id="listViewAvioes" layoutX="22.0" layoutY="94.0" prefHeight="236.0" prefWidth="633.0" style="-fx-background-color: #c5cecf;" stylesheets="@../css/app.css" />
+         </children>
+      </Pane>
+      <Label fx:id="labelTituloInfo" alignment="CENTER" layoutX="172.0" layoutY="111.0" text="INFORMAÇÕES" textFill="#899b50">
+         <font>
+            <Font name="Merriweather Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelTitulo" alignment="CENTER" layoutX="58.0" layoutY="138.0" prefHeight="27.0" prefWidth="381.0" text="FILA DE ATERRISSAGEM     :" textFill="#899b50">
+         <font>
+            <Font name="Merriweather Bold" size="18.0" />
+         </font>
+      </Label>
+      <Pane fx:id="aterrissagemEmegencial" layoutX="60.0" layoutY="265.0" prefHeight="44.0" prefWidth="358.0">
+         <children>
+            <Rectangle arcHeight="25.0" arcWidth="25.0" fill="#c5cecf" height="44.0" layoutX="1.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="0.0" width="292.0" />
+            <Rectangle arcHeight="15.0" arcWidth="15.0" fill="#899b50" height="30.0" layoutX="314.0" layoutY="7.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" strokeWidth="0.0" width="43.0" />
+            <Label fx:id="labelInfo2" alignment="CENTER" layoutX="2.0" layoutY="11.0" prefHeight="22.0" prefWidth="292.0" text="ATERRISSAGENS EMERGENCIAIS:" textFill="#3e4e40">
+               <font>
+                  <Font name="Merriweather Regular" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="qtdAterrissagensEmergenciais" alignment="CENTER" layoutX="314.0" layoutY="14.0" prefHeight="17.0" prefWidth="43.0" text="0" textFill="#3e4e40">
+               <font>
+                  <Font name="Merriweather Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
